@@ -103,5 +103,17 @@ function valorBooleano() {
 }
 
 function lerVariaveis() {
-    let 
+    let variavel = Number(prompt("Digite um número:"));
+    let resto = variavel % 2;
+    if (resto === 0) {
+        let mais5 = variavel + 5;
+        alert("Resultado: " + mais5)
+    } else {
+        let mais8 = variavel + 8;
+        alert("Resultado: " + mais8)
+    }
+}
+
+function ordenarDecrescente() {
+    
 }
