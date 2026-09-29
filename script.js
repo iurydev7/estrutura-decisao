@@ -44,7 +44,7 @@ function tempoCasamento() {
 
 function imparPar() {
     let num = Number(prompt("Digite um número: "));
-    
+
     // (num % 2 !== 1) ? alert("Este número é Par!") : alert("Este número é Impar!");
 
     if(num % 2 === 0) {
@@ -56,4 +56,32 @@ function imparPar() {
         imparPar()
     }
 
+}
+
+function valoresIguais() {
+    let a = Number(prompt("Digite o valor de A:"));
+    let b = Number(prompt("Digite o valor de B:"));
+
+    if (a === b) {
+        let c = a + b;
+        alert("A soma de A + B é: " + c);
+    } else {
+        let c = a * b
+        alert("O produto de A * B é: " + c)
+    }
+}
+
+function valorPositivoNegativo() {
+    let number = Number(prompt("Digite um número positivo ou negativo"));
+    // (number > 0) ? (number * 2, alert("O dobro desse número é: " + number)) : number * 3; 
+    if (number > 0){
+        let dobro = number * 2;
+        alert("O dobro de " + number + " é: " + dobro);
+    } else if (number < 0) {
+        let triplo = number * 3;
+        alert("O Triplo de " + number + " é: " + triplo);
+
+    } else {
+        alert("Oxe, que isso ?")
+    }
 }
