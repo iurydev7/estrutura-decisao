@@ -41,3 +41,19 @@ function tempoCasamento() {
     }
 
 }
+
+function imparPar() {
+    let num = Number(prompt("Digite um número: "));
+    
+    // (num % 2 !== 1) ? alert("Este número é Par!") : alert("Este número é Impar!");
+
+    if(num % 2 === 0) {
+        alert("Este número é Par!")
+    } else if (num % 2 === 1) {
+        alert("Este número é Impar")
+    } else {
+        alert("Caracter Inválido!")
+        imparPar()
+    }
+
+}
