@@ -115,5 +115,27 @@ function lerVariaveis() {
 }
 
 function ordenarDecrescente() {
-    
+    let a = parseInt(prompt("Digite um número: "));
+    let b = parseInt(prompt("Digite um número: "));
+    let c = parseInt(prompt("Digite um número: "));
+
+    if(a > b && a > c) {
+        if(b > c){
+            alert(`${a}, ${b}, ${c}`);
+        } else {
+            alert(`${a}, ${c}, ${b}`);
+        }
+    } else if (b > a && b > c) {
+        if( a > c) {
+            alert(`${b}, ${a}, ${c}`);
+        } else {
+            alert(`${ba}, ${c}, ${a}`);
+        }
+    } else {
+        if( b > a) {
+            alert(`${c}, ${b}, ${a}`);
+        } else {
+            alert(`${c}, ${a}, ${b}`);
+        }
+    }
 }
