@@ -85,3 +85,23 @@ function valorPositivoNegativo() {
         alert("Oxe, que isso ?")
     }
 }
+
+function valorBooleano() {
+    let valor1 = Number(prompt("Digite '1' para true ou '0' para false "));
+    let valor2 = Number(prompt("Digite '1' para true ou '0' para false "));
+
+    let bool1 = Boolean(valor1);
+    let bool2 = Boolean(valor2);
+
+    if (bool1 === false && bool2 === false) {
+        alert("Ambos são Falsos");
+    } else if (bool1 === true && bool2 === true) {
+        alert("Ambos são verdadeiros");
+    } else {
+        alert("Um deles é verdadeiro e o outro é falso");
+    }
+}
+
+function lerVariaveis() {
+    let 
+}
