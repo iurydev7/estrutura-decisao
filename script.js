@@ -216,3 +216,50 @@ function verDesconto() {
     ? alert(`Duas parcelas de: R$ ${(precoFinal / 2).toFixed(2)} cada`)
     : alert(`Valor a pagar: R$ ${precoFinal.toFixed(2)} cada`);
 }
+
+function verificarMedia() {
+    let id = parseInt(prompt("Digite o identificador do Aluno: "));
+    let nota1 = parseFloat(prompt("Digite a nota da 1º verificação: "));
+    let nota2 = parseFloat(prompt("Digite a nota da 2º verificação: "));
+    let nota3 = parseFloat(prompt("Digite a nota da 3º verificação: "));
+    let mediaExercicios = parseFloat(prompt(" Digite a média dos Exercicios: "));
+    const mediaAproveitamento = ((nota1 + (nota2 * 2) + (nota3 * 3) + mediaExercicios )/7) * 10; 
+    console.log(mediaAproveitamento);
+    let conceito;
+
+    switch(true) {
+        case (mediaAproveitamento >= 90):
+            conceito = 'A'
+            break;
+        case (mediaAproveitamento >= 75 && mediaAproveitamento < 90):
+            conceito = 'B'
+            break;
+        case (mediaAproveitamento >= 60 && mediaAproveitamento < 75):
+            conceito = 'C'
+            break;
+        case (mediaAproveitamento >= 40 && mediaAproveitamento < 60):
+            conceito = 'D'
+            break;
+        case (mediaAproveitamento < 40):
+            conceito = 'E'
+            break;
+        default:
+            alert("Impossível Calcular a Média de Aproveitamento do aluno !");
+            return;
+    }
+    let resultado = ['A', 'B', 'C'].includes(conceito) ? "Aprovado" : "Reprovado";
+    alert(`
+        ==================================
+        ID do Aluno: ${id}
+        Notas: 
+        1º verificação: ${nota1}
+        2º verificação: ${nota2}
+        3º verificação: ${nota3}
+        ==================================
+        Média dos Exercicios: ${mediaExercicios}
+        Média de Aproveitamento: ${mediaAproveitamento.toFixed(2)}
+        
+        Conceito: ${conceito} => ${resultado}
+        `)
+
+}
