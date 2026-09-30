@@ -184,5 +184,35 @@ function descobrirImc(){
 }
 
 function verDesconto() {
-    
+    let preco = parseFloat(prompt("Digite o valor do produto: "));
+    let codigo = parseInt(prompt(`
+        Digite o código da condição de pagamento: 
+        1- À vista em dinheiro ou cheque (10% de desconto)
+        2- À vista no cartão de crédito (15% de desconto)
+        3- Em duas vezes, preço normal de etiqueta
+        4- Em duas vezes, preço normal de etiqueta (10% de juros)
+        `));
+    let precoFinal;
+
+    switch(codigo){
+        case 1:
+            precoFinal = preco * 0.9;
+            break;
+
+        case 2:
+            precoFinal = preco * 0.85;
+            break;
+        case 3:
+            precoFinal = preco;
+            break;
+        case 4: 
+            precoFinal = preco * 1.1;
+            break;
+        default: 
+            alert("Condição de pagamento inválida!");
+            break;
+    }
+    (codigo >= 3) 
+    ? alert(`Duas parcelas de: R$ ${(precoFinal / 2).toFixed(2)} cada`)
+    : alert(`Valor a pagar: R$ ${precoFinal.toFixed(2)} cada`);
 }
