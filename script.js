@@ -139,3 +139,50 @@ function ordenarDecrescente() {
         }
     }
 }
+
+function pesoIdeal() {
+    let genero = prompt("Digite seu gênero: (Ex: 'M' ou 'F')").toUpperCase();
+    let altura = parseFloat(prompt("Digite sua altura: (Ex: '1.75')"));
+    let pesoIdeal;
+
+    if(genero === 'M') {
+        pesoIdeal = (72.7 * altura) - 58;
+        alert(`O seu peso ideal é de: ${pesoIdeal}`);
+    } else {
+        pesoIdeal = (62.1 * altura) - 44.7;
+    }
+    alert(`O seu peso ideal é de: ${pesoIdeal.toFixed(2)} Kg `)
+}
+
+function descobrirImc(){
+    let peso = parseFloat(prompt("Digite seu peso: ex: 95.50"));
+    let altura = parseFloat(prompt("Digite sua altura: ex 1.80"));
+    const imc = peso / (altura ** 2);
+    let condicao;
+
+    switch (true) {
+        case imc < 18.5:
+            condicao = "Abaixo do peso";
+            break;
+        case imc >= 18.5 && imc <= 25:
+            condicao = "Peso normal";
+            break;
+        case imc > 25 && imc <= 30:
+            condicao = "Acima do peso";
+            break;
+        case imc > 30:
+            condicao = "Obeso";
+            break;
+        default:
+            alert("Opção inváLida!");
+            break;
+    }
+    alert(`
+        IMC: ${imc.toFixed(2)}
+        Condição: ${condicao}
+        `);
+}
+
+function verDesconto() {
+    
+}
